@@ -1,3 +1,4 @@
+create database lab1
 create table usersss(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
