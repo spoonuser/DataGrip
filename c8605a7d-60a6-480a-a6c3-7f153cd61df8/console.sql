@@ -1,20 +1,20 @@
+drop database lab_1;
+drop table usersss;
+create database lab_1;
 create table usersss(
-    id SERIAL PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50)
+    id int ,
+    firstname varchar(50),
+    lastname varchar(50),
+    primary key (id)
 );
-
-alter table usersss
-add is_admin int default 1;
-alter table usersss
-alter column is_admin type boolean
-using is_admin::boolean;
-create table tasks_2(
-    id serial primary key,
+alter table usersss add isAdmin integer ;
+alter table usersss alter column isAdmin type boolean using (false);
+create table tasks(
+    id int,
     name varchar(50),
-    user_id int
+    user_id int,
+    primary key(id)
 );
-insert into usersss(first_name, last_name)
-values('Alpamys','Kaliyev');
-select * from usersss;
 
+drop table tasks;
+drop database lab_1;
